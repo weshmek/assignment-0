@@ -1,0 +1,158 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AR	../src/Makefile	/^AR	= ar$/;"	m
+ARFLAGS	../src/Makefile	/^ARFLAGS = rcs$/;"	m
+AS	../src/Makefile	/^AS	= as$/;"	m
+AS	../test/Makefile	/^AS	= as$/;"	m
+ASFLAGS	../src/Makefile	/^ASFLAGS	= -mcpu=arm920t -mapcs-32$/;"	m
+ASFLAGS	../test/Makefile	/^ASFLAGS	= -mcpu=arm920t -mapcs-32$/;"	m
+BE_MASK	../include/ts7200.h	47;"	d
+BRDH_MASK	../include/ts7200.h	57;"	d
+BRDL_MASK	../include/ts7200.h	59;"	d
+BRK_MASK	../include/ts7200.h	50;"	d
+CFLAGS	../src/Makefile	/^CFLAGS  = -nostdlib -c -fPIC -Wall -I. -I..\/include -mcpu=arm920t -msoft-float$/;"	m
+CFLAGS	../test/Makefile	/^CFLAGS  = -nostdlib -c -fPIC -Wall -I. -I..\/include -mcpu=arm920t -msoft-float$/;"	m
+CLKSEL_MASK	../include/ts7200.h	22;"	d
+CLR_OFFSET	../include/ts7200.h	23;"	d
+COM1	../include/bwio.h	17;"	d
+COM1	../include/ts7200.h	32;"	d
+COM2	../include/bwio.h	18;"	d
+COM2	../include/ts7200.h	33;"	d
+CRTL_OFFSET	../include/ts7200.h	19;"	d
+CTS_MASK	../include/ts7200.h	68;"	d
+CYCLES_PER_DECISECOND	../include/timer.h	5;"	d
+DATA_MASK	../include/ts7200.h	43;"	d
+DCD_MASK	../include/ts7200.h	69;"	d
+DEADBEEF	../include/ts7200.h	92;"	d
+DSR_MASK	../include/ts7200.h	70;"	d
+ENABLE_MASK	../include/ts7200.h	20;"	d
+EPS_MASK	../include/ts7200.h	52;"	d
+FEN_MASK	../include/ts7200.h	54;"	d
+FE_MASK	../include/ts7200.h	45;"	d
+IRDA_BASE	../include/ts7200.h	35;"	d
+LBEN_MASK	../include/ts7200.h	66;"	d
+LD	../test/Makefile	/^LD      = ld$/;"	m
+LDFLAGS	../test/Makefile	/^LDFLAGS = -init main -N  -T orex.ld -L\/u\/wbcowan\/gnuarm-4.0.2\/lib\/gcc\/arm-elf\/4.0.2 -L..\/lib$/;"	m
+LDR_OFFSET	../include/ts7200.h	17;"	d
+LED_ADDRESS	../include/ts7200.h	26;"	d
+LED_BOTH	../include/ts7200.h	30;"	d
+LED_GREEN	../include/ts7200.h	28;"	d
+LED_NONE	../include/ts7200.h	27;"	d
+LED_RED	../include/ts7200.h	29;"	d
+MODE_MASK	../include/ts7200.h	21;"	d
+MSIEN_MASK	../include/ts7200.h	62;"	d
+OE_MASK	../include/ts7200.h	48;"	d
+OFF	../include/bwio.h	21;"	d
+ON	../include/bwio.h	20;"	d
+PEN_MASK	../include/ts7200.h	51;"	d
+PE_MASK	../include/ts7200.h	46;"	d
+RIEN_MASK	../include/ts7200.h	63;"	d
+RTIEN_MASK	../include/ts7200.h	65;"	d
+RXFE_MASK	../include/ts7200.h	72;"	d
+RXFF_MASK	../include/ts7200.h	74;"	d
+STP2_MASK	../include/ts7200.h	53;"	d
+TIEN_MASK	../include/ts7200.h	64;"	d
+TIMER1_BASE	../include/ts7200.h	8;"	d
+TIMER2_BASE	../include/ts7200.h	9;"	d
+TIMER3_BASE	../include/ts7200.h	10;"	d
+TIMER3_CONTROL	../include/ts7200.h	15;"	d
+TIMER3_LOAD	../include/ts7200.h	14;"	d
+TIMER3_VALUE	../include/ts7200.h	13;"	d
+TXBUSY_MASK	../include/ts7200.h	71;"	d
+TXFE_MASK	../include/ts7200.h	75;"	d
+TXFF_MASK	../include/ts7200.h	73;"	d
+UART1_BASE	../include/ts7200.h	36;"	d
+UART2_BASE	../include/ts7200.h	37;"	d
+UARTEN_MASK	../include/ts7200.h	61;"	d
+UART_CLK_FREQ	../src/bwio.c	12;"	d	file:
+UART_CTLR_OFFSET	../include/ts7200.h	60;"	d
+UART_DATA_OFFSET	../include/ts7200.h	42;"	d
+UART_DMAR_OFFSET	../include/ts7200.h	77;"	d
+UART_FLAG_OFFSET	../include/ts7200.h	67;"	d
+UART_HDLCAMV_OFFSET	../include/ts7200.h	84;"	d
+UART_HDLCAM_OFFSET	../include/ts7200.h	85;"	d
+UART_HDLCCTL_OFFSET	../include/ts7200.h	83;"	d
+UART_HDLCRIB_OFFSET	../include/ts7200.h	86;"	d
+UART_HDLCSTS_OFFSET	../include/ts7200.h	87;"	d
+UART_INTR_OFFSET	../include/ts7200.h	76;"	d
+UART_LCRH_OFFSET	../include/ts7200.h	49;"	d
+UART_LCRL_OFFSET	../include/ts7200.h	58;"	d
+UART_LCRM_OFFSET	../include/ts7200.h	56;"	d
+UART_MDMCTL_OFFSET	../include/ts7200.h	81;"	d
+UART_MDMSTS_OFFSET	../include/ts7200.h	82;"	d
+UART_RSR_OFFSET	../include/ts7200.h	44;"	d
+VAL_OFFSET	../include/ts7200.h	18;"	d
+WLEN_MASK	../include/ts7200.h	55;"	d
+XCC	../src/Makefile	/^XCC     = gcc$/;"	m
+XCC	../test/Makefile	/^XCC     = gcc$/;"	m
+__CURSOR_ADDRESSING_H__	../include/cursor-addressing.h	2;"	d
+__PANIC_H__	../include/panic.h	2;"	d
+__POLIO_H__	../include/polio.h	2;"	d
+__TIMER_H__	../include/timer.h	2;"	d
+__TIME_H__	../include/time.h	2;"	d
+__va_argsiz	../include/bwio.h	7;"	d
+bwa2d	../src/bwio.c	/^int bwa2d( char ch ) {$/;"	f
+bwa2d	../src/bwio.s	/^bwa2d:$/;"	l
+bwa2i	../src/bwio.c	/^char bwa2i( char ch, char **src, int base, int *nump ) {$/;"	f
+bwa2i	../src/bwio.s	/^bwa2i:$/;"	l
+bwformat	../src/bwio.c	/^void bwformat ( int channel, char *fmt, va_list va ) {$/;"	f
+bwformat	../src/bwio.s	/^bwformat:$/;"	l
+bwgetc	../src/bwio.c	/^int bwgetc( int channel ) {$/;"	f
+bwgetc	../src/bwio.s	/^bwgetc:$/;"	l
+bwi2a	../src/bwio.c	/^void bwi2a( int num, char *bf ) {$/;"	f
+bwi2a	../src/bwio.s	/^bwi2a:$/;"	l
+bwprintf	../src/bwio.c	/^void bwprintf( int channel, char *fmt, ... ) {$/;"	f
+bwprintf	../src/bwio.s	/^bwprintf:$/;"	l
+bwputc	../src/bwio.c	/^int bwputc( int channel, char c ) {$/;"	f
+bwputc	../src/bwio.s	/^bwputc:$/;"	l
+bwputr	../src/bwio.c	/^int bwputr( int channel, unsigned int reg ) {$/;"	f
+bwputr	../src/bwio.s	/^bwputr:$/;"	l
+bwputstr	../src/bwio.c	/^int bwputstr( int channel, char *str ) {$/;"	f
+bwputstr	../src/bwio.s	/^bwputstr:$/;"	l
+bwputw	../src/bwio.c	/^void bwputw( int channel, int n, char fc, char *bf ) {$/;"	f
+bwputw	../src/bwio.s	/^bwputw:$/;"	l
+bwputx	../src/bwio.c	/^int bwputx( int channel, char c ) {$/;"	f
+bwputx	../src/bwio.s	/^bwputx:$/;"	l
+bwsetfifo	../src/bwio.c	/^int bwsetfifo( int channel, int state ) {$/;"	f
+bwsetfifo	../src/bwio.s	/^bwsetfifo:$/;"	l
+bwsetspeed	../src/bwio.c	/^int bwsetspeed( int channel, int speed ) {$/;"	f
+bwsetspeed	../src/bwio.s	/^bwsetspeed:$/;"	l
+bwui2a	../src/bwio.c	/^void bwui2a( unsigned int num, unsigned int base, char *bf ) {$/;"	f
+bwui2a	../src/bwio.s	/^bwui2a:$/;"	l
+c2x	../src/bwio.c	/^char c2x( char ch ) {$/;"	f
+c2x	../src/bwio.s	/^c2x:$/;"	l
+cls	../include/cursor-addressing.h	12;"	d
+deciseconds	../include/time.h	/^typedef struct {unsigned int minutes; unsigned int seconds ; unsigned int deciseconds;} time_struct;$/;"	m	struct:__anon1
+esc	../include/cursor-addressing.h	10;"	d
+get_curtime	../src/time.c	/^time_struct get_curtime(time_struct prev)$/;"	f
+get_curtime	../src/time.s	/^get_curtime:$/;"	l
+get_time	../src/timer.c	/^unsigned int get_time(void)$/;"	f
+get_time	../src/timer.s	/^get_time:$/;"	l
+hide_cursor	../include/cursor-addressing.h	17;"	d
+main	../test/cursor-addressing-test.c	/^int main()$/;"	f
+main	../test/cursor-addressing-test.s	/^main:$/;"	l
+main	../test/iotest.c	/^int main( int argc, char* argv[] ) {$/;"	f
+main	../test/iotest.s	/^main:$/;"	l
+main	../test/timertest.c	/^int main(void)$/;"	f
+main	../test/timertest.s	/^main:$/;"	l
+main	../test/traintest.c	/^int main(void)$/;"	f
+main	../test/traintest.s	/^main:$/;"	l
+minutes	../include/time.h	/^typedef struct {unsigned int minutes; unsigned int seconds ; unsigned int deciseconds;} time_struct;$/;"	m	struct:__anon1
+panic	../src/panic.c	/^int panic = 0;$/;"	v
+panic	../src/panic.s	/^panic:$/;"	l
+pos	../include/cursor-addressing.h	14;"	d
+seconds	../include/time.h	/^typedef struct {unsigned int minutes; unsigned int seconds ; unsigned int deciseconds;} time_struct;$/;"	m	struct:__anon1
+set_led	../src/bwio.c	/^void set_led(int status)$/;"	f
+set_led	../src/bwio.s	/^set_led:$/;"	l
+set_led	../src/led.c	/^void set_led(int status)$/;"	f
+set_timer	../src/timer.c	/^void set_timer(unsigned int init)$/;"	f
+set_timer	../src/timer.s	/^set_timer:$/;"	l
+time_struct	../include/time.h	/^typedef struct {unsigned int minutes; unsigned int seconds ; unsigned int deciseconds;} time_struct;$/;"	t	typeref:struct:__anon1
+va_arg	../include/bwio.h	14;"	d
+va_end	../include/bwio.h	12;"	d
+va_list	../include/bwio.h	/^typedef char *va_list;$/;"	t
+va_start	../include/bwio.h	10;"	d

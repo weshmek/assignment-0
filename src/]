@@ -1,0 +1,160 @@
+#include <polio.h>
+#include <buffers.h>
+#include <parse_instruction.h>
+
+int execute;
+int write;
+
+int linepos;
+int got_command;
+
+char char_to_write;
+
+enum QUERY_STATE
+{IDLE, QUERY_SENT, BYTE_1_RECEIVED, COMPLETE};
+static int sensor_to_query;
+static int sensor_reply_received;
+static enum QUERY_STATE sensor_query_state;
+
+//static char prev_command[BUFFER_SIZE];
+//static char prev_command_name[2];
+//static char prev_command_number_1[3];
+//static char prev_command_number_2[3];
+int get_char_from_keyboard(void)
+{
+	int k;
+	int x;
+	char c;
+	char command[4];
+	command[3] = '\0';
+	if (!getch(COM2, &c))
+	{
+		if ((c == '\n') || (c == '\r'))
+		{
+			polprintf(COM2, "\033[5;3H\033[K");
+			put_on_buffer(&keyboard_buffer, c);
+			x = parse_instruction(keyboard_buffer.buf, command);
+			
+			if (x)
+			{
+				k = 0;
+				execute = 1;
+				for (k = 0; k < x; k++)
+				{
+					put_on_buffer(&train_buffer, command[k]);
+				
+				}
+				polprintf(COM2, "\033[7;14H\033[K");
+				for (k = 0; k < linepos - 3; k++)
+				{
+					polprintf(COM2, "%c", keyboard_buffer.buf[k]);
+				}
+					
+			}
+			
+			polprintf(COM2, "\033[5;3H\033[K");
+			keyboard_buffer.pos = 1;
+			keyboard_buffer.empty = 1;
+			write = 1;
+			linepos = 3;
+			return 1;
+		}
+		else if (c == '\b')
+		{
+			linepos = (linepos == 3) ? 3 : (linepos - 1);
+			polprintf(COM2, "\033[5;%dH\033[K", linepos);
+			keyboard_buffer.pos = (keyboard_buffer.pos == 1) ? 1 : (keyboard_buffer.pos - 1);
+			if (keyboard_buffer.pos == 1)
+			{
+				keyboard_buffer.empty = 1;
+			}
+			write = 1;
+			return 1;
+		}
+		else if ((put_on_buffer(&keyboard_buffer, c) > 0) )
+		{
+		
+		
+				polprintf(COM2, "\033[5;%dH%c", linepos,  c);
+				linepos++;
+				write = 1;
+				return 1;
+		}
+		else
+		{	
+			return 0;
+		}
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+
+int send_char_to_screen(void)
+{
+	char c;
+	if (buffer_peek(&screen_buffer, &c))
+	{
+		if (!putch(COM2, c))
+		{
+			buffer_take(&screen_buffer, &c);
+			return 1;
+		}
+	}
+	return 0;
+}
+int parse_command(void)
+{
+	char c;
+	char command[2];
+	if (buffer_peek(&keyboard_buffer, &c))
+	{
+		if (keyboard_buffer.buf[keyboard_buffer.pos - 1] == '\n')
+		{
+			if (parse_instruction(keyboard_buffer.buf, (char*)command))
+			{
+				if (put_on_buffer(&train_buffer, command[0]))
+				{
+					if (put_on_buffer(&train_buffer, command[1]))
+					{
+						keyboard_buffer.pos = 1;
+						keyboard_buffer.empty = 1;
+						return 1;
+					}
+				}
+			}
+			else if (q == 1)
+			{
+				return 1;
+			}
+		}
+	}
+	return 0;
+}
+			
+int execute_command(void)
+{
+	char c;
+	if(buffer_peek(&train_buffer, &c))
+	{
+		if (!putch(COM1, c))
+		{
+			buffer_take(&train_buffer, &c);
+			return 1;
+		}
+	}
+	return 0;
+}
+			
+		
+
+int query_sensor()
+{
+	(void) sensor_query_state;
+	(void) sensor_to_query;
+	(void) sensor_
+	return 0;
+}
+

@@ -1,0 +1,187 @@
+Archive member included because of file (symbol)
+
+../lib/libpolio.a(polio.o)    buffertests.o (setspeed)
+../lib/libpolio.a(timer.o)    buffertests.o (set_timer)
+../lib/libpolio.a(time.o)     buffertests.o (get_curtime)
+../lib/libbuffers.a(buffers.o)
+                              buffertests.o (buffer_init)
+../lib/libbuffers.a(terminal.o)
+                              buffertests.o (init_terminal)
+../lib/libbuffers.a(parse_instruction.o)
+                              ../lib/libbuffers.a(terminal.o) (parse_instruction)
+/u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o)
+                              ../lib/libpolio.a(polio.o) (__udivsi3)
+/u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_umodsi3.o)
+                              ../lib/libpolio.a(polio.o) (__umodsi3)
+/u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_dvmd_tls.o)
+                              /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o) (__div0)
+
+Allocating common symbols
+Common symbol       size              file
+
+mod_d_print_states  0x40              ../lib/libbuffers.a(terminal.o)
+linepos             0x4               ../lib/libbuffers.a(terminal.o)
+switch_states       0x17              buffertests.o
+mod_e_print_states  0x40              ../lib/libbuffers.a(terminal.o)
+train_buffer        0x408             ../lib/libbuffers.a(buffers.o)
+sensor_states       0x58              buffertests.o
+keyboard_buffer     0x408             ../lib/libbuffers.a(buffers.o)
+got_command         0x4               ../lib/libbuffers.a(terminal.o)
+write               0x4               ../lib/libbuffers.a(terminal.o)
+char_to_write       0x1               ../lib/libbuffers.a(terminal.o)
+mod_b_print_states  0x40              ../lib/libbuffers.a(terminal.o)
+mod_c_print_states  0x40              ../lib/libbuffers.a(terminal.o)
+mod_a_print_states  0x40              ../lib/libbuffers.a(terminal.o)
+screen_buffer       0x408             ../lib/libbuffers.a(buffers.o)
+execute             0x4               ../lib/libbuffers.a(terminal.o)
+command_buffer      0x408             ../lib/libbuffers.a(buffers.o)
+q                   0x4               buffertests.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x0000000000000000 0x0000000002000000
+rom              0x0000000060000000 0x0000000000800000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+
+.text           0x0000000000000000     0x327c
+ *(.text)
+ .text          0x0000000000000000      0x594 buffertests.o
+                0x00000000000002a4                main
+ .text          0x0000000000000594      0xda4 ../lib/libpolio.a(polio.o)
+                0x0000000000000bc4                putw
+                0x0000000000000b4c                putstr
+                0x0000000000000f9c                i2a
+                0x0000000000001000                format
+                0x00000000000005ac                setspeed
+                0x00000000000008d8                putch
+                0x0000000000000780                getch
+                0x0000000000001300                polprintf
+                0x0000000000000854                cts
+                0x00000000000006b8                setfifo
+                0x0000000000000a14                putx
+                0x0000000000000594                uart_init
+                0x00000000000009b4                c2x
+                0x0000000000000e58                ui2a
+                0x0000000000000d94                a2i
+                0x0000000000000cec                a2d
+                0x0000000000000ab4                putr
+ .text          0x0000000000001338       0x90 ../lib/libpolio.a(timer.o)
+                0x0000000000001370                set_timer
+                0x0000000000001338                get_time
+ .text          0x00000000000013c8      0x170 ../lib/libpolio.a(time.o)
+                0x00000000000013c8                get_curtime
+ .text          0x0000000000001538      0x344 ../lib/libbuffers.a(buffers.o)
+                0x0000000000001538                buffer_init
+                0x0000000000001740                buffer_take
+                0x0000000000001820                buffer_peek
+                0x00000000000016b8                put_on_buffer
+ .text          0x000000000000187c      0xe4c ../lib/libbuffers.a(terminal.o)
+                0x0000000000001fe8                print_query_response
+                0x0000000000001e04                parse_command
+                0x0000000000002378                query_sensor
+                0x0000000000002630                debug_print
+                0x0000000000001f4c                execute_command
+                0x0000000000001d68                send_char_to_screen
+                0x000000000000187c                init_terminal
+                0x00000000000019a8                get_char_from_keyboard
+ .text          0x00000000000026c8      0x890 ../lib/libbuffers.a(parse_instruction.o)
+                0x0000000000002784                parse_instruction
+ .text          0x0000000000002f58      0x110 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o)
+                0x0000000000002f58                __udivsi3
+                0x0000000000003050                __aeabi_uidivmod
+ .text          0x0000000000003068       0xcc /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_umodsi3.o)
+                0x0000000000003068                __umodsi3
+ .text          0x0000000000003134        0x4 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_dvmd_tls.o)
+                0x0000000000003134                __aeabi_ldiv0
+                0x0000000000003134                __div0
+                0x0000000000003134                __aeabi_idiv0
+ *(.got)
+ .got           0x0000000000003138       0x58 buffertests.o
+ *(.got.plt)
+ .got.plt       0x0000000000003190        0xc buffertests.o
+                0x0000000000003190                _GLOBAL_OFFSET_TABLE_
+ *(.rodata)
+ .rodata        0x000000000000319c       0x78 buffertests.o
+ .rodata        0x0000000000003214       0x68 ../lib/libbuffers.a(terminal.o)
+ *(.glue_7)
+ *(.glue_7t)
+
+.bss            0x000000000000327c     0x1204
+                0x000000000000327c                _BssStart = .
+ *(.bss)
+ .bss           0x000000000000327c        0x8 buffertests.o
+                0x000000000000327c                switch_states_changed
+                0x000000000000327d                sensor_states_changed
+ .bss           0x0000000000003284        0x4 ../lib/libpolio.a(polio.o)
+                0x0000000000003284                chars_to_write
+ .bss           0x0000000000003288       0x10 ../lib/libbuffers.a(terminal.o)
+                0x0000000000003298                _BssEnd = .
+ COMMON         0x0000000000003298       0x74 buffertests.o
+                0x0000000000003298                switch_states
+                0x00000000000032af                sensor_states
+                0x0000000000003308                q
+ COMMON         0x000000000000330c     0x1020 ../lib/libbuffers.a(buffers.o)
+                0x000000000000330c                train_buffer
+                0x0000000000003714                keyboard_buffer
+                0x0000000000003b1c                screen_buffer
+                0x0000000000003f24                command_buffer
+ COMMON         0x000000000000432c      0x154 ../lib/libbuffers.a(terminal.o)
+                0x000000000000432c                mod_d_print_states
+                0x000000000000436c                linepos
+                0x0000000000004370                mod_e_print_states
+                0x00000000000043b0                got_command
+                0x00000000000043b4                write
+                0x00000000000043b8                char_to_write
+                0x00000000000043bc                mod_b_print_states
+                0x00000000000043fc                mod_c_print_states
+                0x000000000000443c                mod_a_print_states
+                0x000000000000447c                execute
+
+.data           0x0000000000004480        0x4
+                0x0000000000004480                _DataStart = .
+ *(.data)
+ .data          0x0000000000004480        0x4 ../lib/libbuffers.a(terminal.o)
+                0x0000000000004484                _DataEnd = .
+
+.rel.dyn
+LOAD buffertests.o
+LOAD ../lib/libpolio.a
+LOAD ../lib/libbuffers.a
+LOAD /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a
+OUTPUT(buffertests.elf elf32-littlearm)
+
+.comment        0x0000000000000000       0x7e
+ .comment       0x0000000000000000       0x12 buffertests.o
+ .comment       0x0000000000000012       0x12 ../lib/libpolio.a(polio.o)
+ .comment       0x0000000000000024       0x12 ../lib/libpolio.a(timer.o)
+ .comment       0x0000000000000036       0x12 ../lib/libpolio.a(time.o)
+ .comment       0x0000000000000048       0x12 ../lib/libbuffers.a(buffers.o)
+ .comment       0x000000000000005a       0x12 ../lib/libbuffers.a(terminal.o)
+ .comment       0x000000000000006c       0x12 ../lib/libbuffers.a(parse_instruction.o)
+
+.debug_line     0x0000000000000000      0x14f
+ .debug_line    0x0000000000000000       0x86 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o)
+ .debug_line    0x0000000000000086       0x6f /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_umodsi3.o)
+ .debug_line    0x00000000000000f5       0x5a /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_dvmd_tls.o)
+
+.debug_info     0x0000000000000000      0x153
+ .debug_info    0x0000000000000000       0x71 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o)
+ .debug_info    0x0000000000000071       0x71 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_umodsi3.o)
+ .debug_info    0x00000000000000e2       0x71 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_dvmd_tls.o)
+
+.debug_abbrev   0x0000000000000000       0x3c
+ .debug_abbrev  0x0000000000000000       0x14 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o)
+ .debug_abbrev  0x0000000000000014       0x14 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_umodsi3.o)
+ .debug_abbrev  0x0000000000000028       0x14 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_dvmd_tls.o)
+
+.debug_aranges  0x0000000000000000       0x60
+ .debug_aranges
+                0x0000000000000000       0x20 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o)
+ .debug_aranges
+                0x0000000000000020       0x20 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_umodsi3.o)
+ .debug_aranges
+                0x0000000000000040       0x20 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_dvmd_tls.o)

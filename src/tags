@@ -1,0 +1,42 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AR	Makefile	/^AR	= ar$/;"	m
+ARFLAGS	Makefile	/^ARFLAGS = rcs$/;"	m
+AS	Makefile	/^AS	= as$/;"	m
+ASFLAGS	Makefile	/^ASFLAGS	= -mcpu=arm920t -mapcs-32$/;"	m
+CFLAGS	Makefile	/^CFLAGS  = -c -fPIC -Wall -I. -I..\/include -mcpu=arm920t -msoft-float$/;"	m
+XCC	Makefile	/^XCC     = gcc$/;"	m
+bwa2d	bwio.c	/^int bwa2d( char ch ) {$/;"	f
+bwa2d	bwio.s	/^bwa2d:$/;"	l
+bwa2i	bwio.c	/^char bwa2i( char ch, char **src, int base, int *nump ) {$/;"	f
+bwa2i	bwio.s	/^bwa2i:$/;"	l
+bwformat	bwio.c	/^void bwformat ( int channel, char *fmt, va_list va ) {$/;"	f
+bwformat	bwio.s	/^bwformat:$/;"	l
+bwgetc	bwio.c	/^int bwgetc( int channel ) {$/;"	f
+bwgetc	bwio.s	/^bwgetc:$/;"	l
+bwi2a	bwio.c	/^void bwi2a( int num, char *bf ) {$/;"	f
+bwi2a	bwio.s	/^bwi2a:$/;"	l
+bwprintf	bwio.c	/^void bwprintf( int channel, char *fmt, ... ) {$/;"	f
+bwprintf	bwio.s	/^bwprintf:$/;"	l
+bwputc	bwio.c	/^int bwputc( int channel, char c ) {$/;"	f
+bwputc	bwio.s	/^bwputc:$/;"	l
+bwputr	bwio.c	/^int bwputr( int channel, unsigned int reg ) {$/;"	f
+bwputr	bwio.s	/^bwputr:$/;"	l
+bwputstr	bwio.c	/^int bwputstr( int channel, char *str ) {$/;"	f
+bwputstr	bwio.s	/^bwputstr:$/;"	l
+bwputw	bwio.c	/^void bwputw( int channel, int n, char fc, char *bf ) {$/;"	f
+bwputw	bwio.s	/^bwputw:$/;"	l
+bwputx	bwio.c	/^int bwputx( int channel, char c ) {$/;"	f
+bwputx	bwio.s	/^bwputx:$/;"	l
+bwsetfifo	bwio.c	/^int bwsetfifo( int channel, int state ) {$/;"	f
+bwsetfifo	bwio.s	/^bwsetfifo:$/;"	l
+bwsetspeed	bwio.c	/^int bwsetspeed( int channel, int speed ) {$/;"	f
+bwsetspeed	bwio.s	/^bwsetspeed:$/;"	l
+bwui2a	bwio.c	/^void bwui2a( unsigned int num, unsigned int base, char *bf ) {$/;"	f
+bwui2a	bwio.s	/^bwui2a:$/;"	l
+c2x	bwio.c	/^char c2x( char ch ) {$/;"	f
+c2x	bwio.s	/^c2x:$/;"	l
