@@ -45,11 +45,11 @@ a7d7c6d160460aa25e1d3e5c2d64a3dc  ../src/terminal.s
 07c9166b5f3ee177b49d30e437a27602  ../src/timer.o
 aa23752fc5b37613237f19f8218a231f  ../src/timer.s
 ece43587f14b5da8800abdce565825ff  ../src/time.s
-5441c01d0dbd71a806fa543185fd82bd  ../test/buffertests.c
-4c8b531f4ad484bd987d11432e3a6700  ../test/buffertests.elf
+abacfa1b8e518a232a4296a9546a1864  ../test/buffertests.c
+16ac8a5a4a98bbcaeb038f1fe4052173  ../test/buffertests.elf
 c219dc0e4d58682c3074bc33a323c5f6  ../test/buffertests.map
-d47b823fa97a6e9e5e1c45859a36978a  ../test/buffertests.o
-9f5044fd5567a49e505a010e0c425f34  ../test/buffertests.s
+a3afc75935bb48e3c40c03858be7c600  ../test/buffertests.o
+9ffe61dde79398813be558598d627187  ../test/buffertests.s
 3ca25ba9484e7073de2733a40313038d  ../test/cursor-addressing-test.c
 d397eda69ec48ba2fc96fd63c35a7e83  ../test/cursor-addressing-test.elf
 65056b229bd1fa0e9d1f1ecffb61c3ff  ../test/cursor-addressing-test.map

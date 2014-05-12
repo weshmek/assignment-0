@@ -257,7 +257,7 @@ print_switch_states:
 	.ascii	"\033[H\000"
 	.align	2
 .LC9:
-	.ascii	"%u.%u.%u\000"
+	.ascii	"%u.%u.%u\033[K\000"
 	.text
 	.align	2
 	.global	main

@@ -97,7 +97,7 @@ int main(void)
 		{
 		
 			polprintf(COM2, "\033[H");
-			polprintf(COM2, "%u.%u.%u", time.minutes, time.seconds, time.deciseconds);
+			polprintf(COM2, "%u.%u.%u\033[K", time.minutes, time.seconds, time.deciseconds);
 			prev = time.prev;
 		}
 		get_char_from_keyboard();
