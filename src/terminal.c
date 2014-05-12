@@ -19,7 +19,7 @@ enum SENSOR_MODULE {MOD_A, MOD_B, MOD_C, MOD_D, MOD_E};
 static enum SENSOR_MODULE module_being_queried = MOD_A;
 
 
-static char sensors_on_screen[32];
+static char sensors_on_screen[30];
 
 
 static int debug_print_line = 50;
@@ -179,7 +179,7 @@ int execute_command(void)
 int check_if_sensor_on_screen(char module, char number)
 {
 	int k;
-	for (k = 0; k < 16; k++)
+	for (k = 0; k < 15; k++)
 	{
 		if ((sensors_on_screen[2 * k] == module) && (sensors_on_screen[(2 * k) + 1] == number))
 		{
@@ -221,9 +221,9 @@ void print_query_response(char response[])
 			if (!check_if_sensor_on_screen(module, (char) 8 - k ))
 			{
 				polprintf(COM2, "\033[%d;40H\033[K%c%d\033[%d;40H\033[K------", line, module, 8 - k, line + 1);
-				line = (line + 1) % 15;
 				sensors_on_screen[2 * line] = module;
 				sensors_on_screen[(2 * line) + 1] = (char) 8 - k;
+				line = (line + 1) % 15;
 			}
 		}
 	}
@@ -231,12 +231,12 @@ void print_query_response(char response[])
 	{
 		if (response[1] & (1 << k))
 		{
-			if (check_if_sensor_on_screen(module, (char) 16 - k))
+			if (!check_if_sensor_on_screen(module, (char) 16 - k))
 			{
 				polprintf(COM2, "\033[%d;40H\033[K%c%d\033[%d;40H\033[K------", line, module, 16 - k, line + 1);
-				line = (line + 1) % 15;
 				sensors_on_screen[2 * line] = module;
-				sensors_on_screen[(2 * line) - 1] = (char) 16 - k;
+				sensors_on_screen[(2 * line) + 1] = (char) 16 - k;
+				line = (line + 1) % 15;
 			
 			}
 		}

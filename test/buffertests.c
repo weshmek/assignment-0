@@ -11,6 +11,7 @@ char sensor_states_changed = 0;
 char switch_states[23];
 char sensor_states[88];
 
+static int sensor_state_position = 0;
 
 static void set_all_switches_to_straight(void)
 {

@@ -613,7 +613,7 @@ check_if_sensor_on_screen:
 	str	r3, [fp, #-20]
 .L73:
 	ldr	r3, [fp, #-20]
-	cmp	r3, #15
+	cmp	r3, #14
 	ble	.L74
 	mov	r3, #0
 	str	r3, [fp, #-32]
@@ -727,8 +727,30 @@ print_query_response:
 	ldr	r3, .L107+8
 	ldr	r3, [sl, r3]
 	ldr	r3, [r3, #0]
-	add	r2, r3, #1
+	mov	r1, r3, asl #1
 	ldr	r3, .L107+16
+	ldr	r2, [sl, r3]
+	ldrb	r3, [fp, #-21]
+	strb	r3, [r2, r1]
+	ldr	r3, .L107+8
+	ldr	r3, [sl, r3]
+	ldr	r3, [r3, #0]
+	mov	r3, r3, asl #1
+	add	r0, r3, #1
+	ldr	r3, [fp, #-20]
+	and	r3, r3, #255
+	rsb	r3, r3, #8
+	and	r3, r3, #255
+	and	r1, r3, #255
+	ldr	r3, .L107+16
+	ldr	r2, [sl, r3]
+	mov	r3, r1
+	strb	r3, [r2, r0]
+	ldr	r3, .L107+8
+	ldr	r3, [sl, r3]
+	ldr	r3, [r3, #0]
+	add	r2, r3, #1
+	ldr	r3, .L107+20
 	smull	r1, r3, r2, r3
 	add	r3, r3, r2
 	mov	r1, r3, asr #3
@@ -745,28 +767,6 @@ print_query_response:
 	ldr	r3, [sl, r3]
 	ldr	r2, [fp, #-36]
 	str	r2, [r3, #0]
-	ldr	r3, .L107+8
-	ldr	r3, [sl, r3]
-	ldr	r3, [r3, #0]
-	mov	r1, r3, asl #1
-	ldr	r3, .L107+20
-	ldr	r2, [sl, r3]
-	ldrb	r3, [fp, #-21]
-	strb	r3, [r2, r1]
-	ldr	r3, .L107+8
-	ldr	r3, [sl, r3]
-	ldr	r3, [r3, #0]
-	mov	r3, r3, asl #1
-	add	r0, r3, #1
-	ldr	r3, [fp, #-20]
-	and	r3, r3, #255
-	rsb	r3, r3, #8
-	and	r3, r3, #255
-	and	r1, r3, #255
-	ldr	r3, .L107+20
-	ldr	r2, [sl, r3]
-	mov	r3, r1
-	strb	r3, [r2, r0]
 .L96:
 	ldr	r3, [fp, #-20]
 	sub	r3, r3, #1
@@ -800,7 +800,7 @@ print_query_response:
 	bl	check_if_sensor_on_screen(PLT)
 	mov	r3, r0
 	cmp	r3, #0
-	beq	.L102
+	bne	.L102
 	ldr	r3, .L107+8
 	ldr	r3, [sl, r3]
 	ldr	ip, [r3, #0]
@@ -823,8 +823,30 @@ print_query_response:
 	ldr	r3, .L107+8
 	ldr	r3, [sl, r3]
 	ldr	r3, [r3, #0]
-	add	r2, r3, #1
+	mov	r1, r3, asl #1
 	ldr	r3, .L107+16
+	ldr	r2, [sl, r3]
+	ldrb	r3, [fp, #-21]
+	strb	r3, [r2, r1]
+	ldr	r3, .L107+8
+	ldr	r3, [sl, r3]
+	ldr	r3, [r3, #0]
+	mov	r3, r3, asl #1
+	add	r0, r3, #1
+	ldr	r3, [fp, #-20]
+	and	r3, r3, #255
+	rsb	r3, r3, #16
+	and	r3, r3, #255
+	and	r1, r3, #255
+	ldr	r3, .L107+16
+	ldr	r2, [sl, r3]
+	mov	r3, r1
+	strb	r3, [r2, r0]
+	ldr	r3, .L107+8
+	ldr	r3, [sl, r3]
+	ldr	r3, [r3, #0]
+	add	r2, r3, #1
+	ldr	r3, .L107+20
 	smull	r1, r3, r2, r3
 	add	r3, r3, r2
 	mov	r1, r3, asr #3
@@ -841,28 +863,6 @@ print_query_response:
 	ldr	r3, [sl, r3]
 	ldr	r2, [fp, #-32]
 	str	r2, [r3, #0]
-	ldr	r3, .L107+8
-	ldr	r3, [sl, r3]
-	ldr	r3, [r3, #0]
-	mov	r1, r3, asl #1
-	ldr	r3, .L107+20
-	ldr	r2, [sl, r3]
-	ldrb	r3, [fp, #-21]
-	strb	r3, [r2, r1]
-	ldr	r3, .L107+8
-	ldr	r3, [sl, r3]
-	ldr	r3, [r3, #0]
-	mov	r3, r3, asl #1
-	sub	r0, r3, #1
-	ldr	r3, [fp, #-20]
-	and	r3, r3, #255
-	rsb	r3, r3, #16
-	and	r3, r3, #255
-	and	r1, r3, #255
-	ldr	r3, .L107+20
-	ldr	r2, [sl, r3]
-	mov	r3, r1
-	strb	r3, [r2, r0]
 .L102:
 	ldr	r3, [fp, #-20]
 	sub	r3, r3, #1
@@ -881,8 +881,8 @@ print_query_response:
 	.word	module_being_queried(GOT)
 	.word	line(GOT)
 	.word	.LC5(GOTOFF)
-	.word	-2004318071
 	.word	sensors_on_screen(GOT)
+	.word	-2004318071
 	.size	print_query_response, .-print_query_response
 	.align	2
 	.global	query_sensor
@@ -1140,7 +1140,7 @@ debug_print:
 	.size	debug_print, .-debug_print
 	.bss
 sensors_on_screen:
-	.space	32
+	.space	30
 query_response:
 	.space	2
 	.comm	linepos,4,4
